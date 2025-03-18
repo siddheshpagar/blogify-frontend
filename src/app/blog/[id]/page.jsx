@@ -116,7 +116,8 @@ const Page = ({ params }) => {
                     <div className="relative">
                         <div
                             ref={ref}
-                            className={`ProseMirror text-[#98989A] Blog transition-all duration-300 overflow-hidden break-all ${isOpen ? "" : "max-h-screen"
+                            // break-all 
+                            className={`ProseMirror text-[#98989A] Blog transition-all duration-300 overflow-hidden  ${isOpen ? "" : "max-h-screen"
                                 }`}
                             dangerouslySetInnerHTML={{ __html: fetchBlogByIdQuery.data.data.blog.description }}
                         />

@@ -11,7 +11,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { deleteUserBlogById, fetchUserBlogs } from "@/services/userService";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { PencilLine, Trash } from "lucide-react";
+import { Eye, PencilLine, Trash } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -126,6 +126,13 @@ const page = () => {
                       deleteUserBlogByIdMutation.mutate(item._id);
                     }}
                     className="text-gray-400 cursor-pointer hover:text-white "
+                  />
+                  <Eye
+                    className="text-gray-400 cursor-pointer hover:text-white "
+                    onClick={() =>
+                      // redirect user to blog
+                      router.push(`/blog/${item._id}`)
+                    }
                   />
                 </div>
               </TableCell>
