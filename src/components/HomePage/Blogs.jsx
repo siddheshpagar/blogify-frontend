@@ -64,7 +64,7 @@ const Blogs = () => {
         }
         return (
             <div className="text-white flex justify-center items-center text-center py-4">
-                "{errorMessage}"
+                {errorMessage}
             </div>
         );
     }

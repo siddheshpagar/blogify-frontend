@@ -77,7 +77,7 @@ const Page = ({ params }) => {
         }
         return (
             <div className="text-white h-screen flex justify-center items-center text-center py-4">
-                "{errorMessage}"
+                {errorMessage}
             </div>
         );
     }

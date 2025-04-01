@@ -15,7 +15,7 @@ import { Eye, PencilLine, Trash } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { toast } = useToast()
@@ -68,9 +68,9 @@ const page = () => {
           ?
           <div>
             <Image src="/nodata.gif" width={100} height={100} alt="No Data" className="mx-auto w-60 h-60 md:w-96 100 md:h-96 mb-2" />
-            "It looks like you haven't created any blogs yet.
+            It looks like you haven&apos;t created any blogs yet.
             <br />
-            Start sharing your thoughts and ideas by creating your first blog!"
+            Start sharing your thoughts and ideas by creating your first blog!
           </div>
 
           : errorMessage}
@@ -144,4 +144,4 @@ const page = () => {
   );
 }
 
-export default page
+export default Page

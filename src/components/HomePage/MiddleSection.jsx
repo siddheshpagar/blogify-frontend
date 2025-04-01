@@ -13,21 +13,21 @@ const MiddleSection = () => {
             title: "Latest News Updates",
             subtitle: "Stay Current",
             description: "Over 1,000 articles published monthly",
-            url:"/blog",
+            url: "/blog",
         },
         {
             imgSrc: "/item2.png",
             title: "Expert Contributors",
             subtitle: "Trusted Insights",
             description: "50+ renowned AI experts on our team",
-            url:"/user/dashboard/createblog",
+            url: "/user/dashboard/createblog",
         },
         {
             imgSrc: "/item3.png",
             title: "Global Readership",
             subtitle: "Worldwide Impact",
             description: "2 million monthly readers",
-            url:"/user/dashboard/listblog",
+            url: "/user/dashboard/listblog",
         },
     ];
 
@@ -51,7 +51,7 @@ const MiddleSection = () => {
                                 <h3 className="text-base lg:text-xl font-bold">{item.title}</h3>
                                 <p className="mt-1 text-[#7E7E81] text-sm lg:text-lg">{item.subtitle}</p>
                             </div>
-                            <div onClick={()=>{router.push(item.url)}} className="cursor-pointer hover:scale-110 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                            <div onClick={() => { router.push(item.url) }} className="cursor-pointer hover:scale-110 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                                 <Arrow color="#141414" />
                             </div>
                         </div>
@@ -61,7 +61,7 @@ const MiddleSection = () => {
             </div>
             <div className=" lg:py-10 my-5 lg:my-8 lg:mt-8  lg:flex lg:items-start lg:justify-between">
                 <h2 className="text-3xl font-bold lg:w-1/2">
-                    Today's Headlines: Stay Informed
+                    Today&apos;s Headlines: Stay Informed
                 </h2>
                 <p className="mt-4 text-gray-300 lg:mt-0 lg:ml-4 lg:w-1/2">
                     Explore the latest news from around the world. We bring you up-to-the-minute updates on the most significant events, trends, and stories. Discover the world through our news coverage.

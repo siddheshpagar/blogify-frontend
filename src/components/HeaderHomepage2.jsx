@@ -162,7 +162,7 @@ export default function HeaderHomepage() {
 
       <div className="p-5 lg:p-10 mt-5 lg:mt-8 lg:text-left lg:flex lg:items-start lg:justify-between">
         <h2 className="text-3xl font-bold">
-          Today's Headlines: Stay Informed
+          Today&apos;s Headlines: Stay Informed
         </h2>
         <p className="mt-4 text-gray-300 lg:mt-0 lg:ml-4 lg:w-1/2">
           Explore the latest news from around the world. We bring you up-to-the-minute updates on the most significant events, trends, and stories. Discover the world through our news coverage.

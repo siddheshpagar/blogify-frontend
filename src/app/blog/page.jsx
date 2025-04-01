@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 // final
 // displays all blogs with category filters and a refresh option
-const page = () => {
+const Page = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");//selected category for filtering blogs
     const [isRefetching, setIsRefetching] = useState(false);
 
@@ -63,7 +63,7 @@ const page = () => {
         }
         return (
             <div className="text-white h-screen flex justify-center items-center text-center py-4">
-                "{errorMessage}"
+                {errorMessage}
             </div>
         );
     }
@@ -132,4 +132,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

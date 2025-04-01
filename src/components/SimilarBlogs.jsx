@@ -41,7 +41,7 @@ const SimilarBlogs = ({ id }) => {
         }
         return (
             <div className="text-white flex justify-center items-center text-center py-4">
-                "{errorMessage}"
+                {errorMessage}
             </div>
         );
     }
@@ -113,7 +113,7 @@ const SimilarBlogs = ({ id }) => {
                                 </div>
                             </div>
                             {/* 2 */}
-                            <Button onClick={()=>router.push(`/blog/${blog._id}`)} className="bg-[#141414] border border-[#262626] rounded-[8px] md:rounded-[12px] text-[#98989A] text-[14px] md:text-[18px] font-normal leading-[21px] md:leading-[27px] px-[20px] md:px-[24px] py-[14px] md:py-[18px] flex items-center gap-x-1 md:gap-x-[10px]" >
+                            <Button onClick={() => router.push(`/blog/${blog._id}`)} className="bg-[#141414] border border-[#262626] rounded-[8px] md:rounded-[12px] text-[#98989A] text-[14px] md:text-[18px] font-normal leading-[21px] md:leading-[27px] px-[20px] md:px-[24px] py-[14px] md:py-[18px] flex items-center gap-x-1 md:gap-x-[10px]" >
                                 <span>Read More</span>
                                 <Arrow />
                             </Button>
