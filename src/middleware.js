@@ -1,14 +1,16 @@
-import { cookies } from 'next/headers';
+// import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
     // Get cookies from the request headers
     // const cookies = request.cookies;    
-    const cookieStore = cookies();
-    const userToken = cookieStore.get('userToken')?.value;
-    const adminToken = cookieStore.get('adminToken')?.value;
+    // const cookieStore = cookies();
+    // const userToken = cookieStore.get('userToken')?.value;
+    // const adminToken = cookieStore.get('adminToken')?.value;
 
-
+    const userToken = request.cookies.get('userToken')?.value;
+    const adminToken = request.cookies.get('adminToken')?.value;
+    
     console.log("Middleware: userToken =>", userToken); // Check if token is being received
 
     const userPaths = ['/user/login', '/user/signup'];
