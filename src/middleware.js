@@ -4,10 +4,13 @@ import { NextResponse } from 'next/server';
 // Middleware function
 export function middleware(request) {
     // const cookieStore = cookies();
+    const cookieHeader = request.headers.get('cookie');
 
-    console.log("accessing COOKIE in middleare.js for user => " + request.cookies.get("userToken"));
-    const userToken = request.cookies.get("userToken")?.value;
-    const adminToken = request.cookies.get("adminToken")?.value;
+    // const userToken = request.cookies.get("userToken")?.value;
+    // const adminToken = request.cookies.get("adminToken")?.value;
+    const userToken = cookieHeader?.split('; ').find(row => row.startsWith('userToken='))?.split('=')[1];
+    const adminToken = cookieHeader?.split('; ').find(row => row.startsWith('adminToken='))?.split('=')[1];
+    console.log("Middleware: userToken =>", userToken);
 
     const userPaths = ['/user/login', '/user/signup'];
     const adminPaths = ['/admin/login', '/admin/signup'];
