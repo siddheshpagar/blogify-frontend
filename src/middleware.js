@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 // Middleware function
 export function middleware(request) {
     const cookieStore = cookies();
+    console.log("accessing COOKIE in middleare.js for user => "+cookieStore.get("userToken"));
     const userToken = cookieStore.get("userToken")?.value;
     const adminToken = cookieStore.get("adminToken")?.value;
 
