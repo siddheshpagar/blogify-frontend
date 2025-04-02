@@ -1,7 +1,12 @@
+import { NextResponse } from 'next/server';
+
 export function middleware(request) {
-    const cookieHeader = request.headers.get('cookie') || '';
-    const userToken = cookieHeader.split('; ').find(row => row.startsWith('userToken='))?.split('=')[1];
-    const adminToken = cookieHeader.split('; ').find(row => row.startsWith('adminToken='))?.split('=')[1];
+// Get cookies from the request headers
+const cookies = request.cookies;    
+
+const userToken = cookies.get('userToken')?.value;
+    const adminToken = cookies.get('adminToken')?.value;
+    
 
     console.log("Middleware: userToken =>", userToken); // Check if token is being received
 
@@ -17,10 +22,29 @@ export function middleware(request) {
         return NextResponse.redirect(url);
     };
 
-    // Redirect logic
-    if (!userToken && !isAdminRoute) return redirectToLogin('/user/login');
-    if (!adminToken && isAdminRoute) return redirectToLogin('/admin/login');
+    // User logic
+    if (isUserPath) {
+        if (userToken) {
+            // console.log('Authenticated user attempting to access login/signup.');
+            return NextResponse.redirect(new URL('/', request.url));
+        }
+    } else if (!userToken && !isAdminRoute) {
+        // console.log('Unauthenticated user attempting to access secured route.');
+        return redirectToLogin('/user/login');
+    }
 
+    // Admin logic
+    if (isAdminPath) {
+        if (adminToken) {
+            // console.log('Authenticated admin attempting to access login/signup.');
+            return NextResponse.redirect(new URL('/admin/dashboard/users', request.url));
+        }
+    } else if (!adminToken && isAdminRoute) {
+        // console.log('Unauthenticated admin attempting to access secured admin route.');
+        return redirectToLogin('/admin/login');
+    }
+
+    // console.log(`Middleware: UserToken=${userToken}, AdminToken=${adminToken}`);
     return NextResponse.next();
 }
 
