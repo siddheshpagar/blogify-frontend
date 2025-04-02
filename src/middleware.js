@@ -1,12 +1,13 @@
-import { cookies } from 'next/headers';
+// import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
 // Middleware function
 export function middleware(request) {
-    const cookieStore = cookies();
-    console.log("accessing COOKIE in middleare.js for user => "+cookieStore.get("userToken"));
-    const userToken = cookieStore.get("userToken")?.value;
-    const adminToken = cookieStore.get("adminToken")?.value;
+    // const cookieStore = cookies();
+
+    console.log("accessing COOKIE in middleare.js for user => " + request.cookies.get("userToken"));
+    const userToken = request.cookies.get("userToken")?.value;
+    const adminToken = request.cookies.get("adminToken")?.value;
 
     const userPaths = ['/user/login', '/user/signup'];
     const adminPaths = ['/admin/login', '/admin/signup'];
