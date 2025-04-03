@@ -20,22 +20,22 @@ export function middleware(request) {
     // User logic
     if (isUserPath) {
         if (userToken) {
-            console.log('Authenticated user attempting to access login/signup.');
+            // console.log('Authenticated user attempting to access login/signup.');
             return NextResponse.redirect(new URL('/', request.url));
         }
     } else if (!userToken && !isAdminRoute) {
-        console.log('Unauthenticated user attempting to access secured route.');
+        // console.log('Unauthenticated user attempting to access secured route.');
         return redirectToLogin('/user/login');
     }
 
     // Admin logic
     if (isAdminPath) {
         if (adminToken) {
-            console.log('Authenticated admin attempting to access login/signup.');
+            // console.log('Authenticated admin attempting to access login/signup.');
             return NextResponse.redirect(new URL('/admin/dashboard/users', request.url));
         }
     } else if (!adminToken && isAdminRoute) {
-        console.log('Unauthenticated admin attempting to access secured admin route.');
+        // console.log('Unauthenticated admin attempting to access secured admin route.');
         return redirectToLogin('/admin/login');
     }
 
