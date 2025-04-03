@@ -11,7 +11,7 @@ export function middleware(request) {
     const userToken = request.cookies.get('userToken')?.value;
     const adminToken = request.cookies.get('adminToken')?.value;
     
-    console.log("Middleware: userToken =>", userToken); // Check if token is being received
+    console.log("Middleware: userToken =>", adminToken); // Check if token is being received
 
     const userPaths = ['/user/login', '/user/signup'];
     const adminPaths = ['/admin/login', '/admin/signup'];
