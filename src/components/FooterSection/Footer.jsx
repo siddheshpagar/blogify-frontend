@@ -3,6 +3,7 @@ import FooterSection from './FooterSection';
 import { footersections, resources } from './footersectionData';
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
 
@@ -46,9 +47,17 @@ const Footer = () => {
                 </div>
 
                 <div className='order-1 lg:order-2 flex flex-row gap-x-[14px] items-center lg:gap-x-5'>
-                    <Image src="/twitter.png" alt='twitter' width={22.8} height={19.2} className='w-[19px] h-[16px]  lg:w-[22.8px] lg:h-[19.2px]'></Image>
-                    <Image src="/socialMedia.png" alt='twitter' width={22.8} height={19.2} className='w-[20px] h-[11.38px]  lg:w-6 lg:h-[13.66px]'></Image>
-                    <Image src="/linkedin.png" alt='twitter' width={20.8} height={20.8} className='w-[17.33px] h-[17.33px]  lg:w-[20.8px] lg:h-[20.8px]'></Image>
+                    <Link href="https://wa.me/917021031478" target="_blank" rel="noopener noreferrer">
+                        <Image src="/twitter.png" alt='twitter' width={22.8} height={19.2} className='w-[19px] h-[16px]  lg:w-[22.8px] lg:h-[19.2px]'></Image>
+                    </Link>
+
+                    <Link href="mailto:pagarsiddhesh2000@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <Image src="/socialMedia.png" alt='twitter' width={22.8} height={19.2} className='w-[20px] h-[11.38px]  lg:w-6 lg:h-[13.66px]'></Image>
+                    </Link>
+
+                    <Link href="https://www.linkedin.com/in/siddheshpagar/" target="_blank" rel="noopener noreferrer">
+                        <Image src="/linkedin.png" alt='twitter' width={20.8} height={20.8} className='w-[17.33px] h-[17.33px]  lg:w-[20.8px] lg:h-[20.8px]'></Image>
+                    </Link>
                 </div>
 
                 <p className='order-3 lg:order-3'>&copy; 2024 FutureTech. All rights reserved.</p>
