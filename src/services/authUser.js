@@ -20,6 +20,11 @@ export const userLogin = async (loginData) => {
         withCredentials: true, // Include cookies in the request
       }
     );
+
+    const token = response?.data?.token;
+    if (token) {
+      document.cookie = `userToken=${token}; path=/; secure; samesite=None`;
+    }
     return response;
   } catch (error) {
     throw error;
