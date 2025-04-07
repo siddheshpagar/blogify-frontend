@@ -21,10 +21,11 @@ const Users = () => {
 
   // dummy user images
   const userImages = [
-    "https://s3-alpha-sig.figma.com/img/23ed/ad01/53988d6704197a43ed4d17e51f00e455?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZEfIULAaGP~auOisL2nQAnfO~555MiDujeMGhurpuqd29z3oTSS6i0doWw9jU~EXQyUSJ5Umb8ZycoKsJfe8t1vD5SnPWDJWZKp9a0WhvNsBriTgL0qBNosoVYRvJpu6vghH1cPb~0LTRdiQYbpyxEdl8SzFHqFBXg4f16ByzIbBoQ~fsZvIDEgZJHtEkbBJkM2YMSWVyMeyOA8xPDr9hek5ZjXSV7lcbn8GsL9di8LXZGqHRNE7deYCENVQ3cncBiUyDUUNo3LzOmXP2C3dD6Q~~2Zr3HOnR0APpBbAHzjA9NXA~IPWYz-jJTixf6MYuHUu~wO1fjXOP57BQzK2FQ__",
-    "https://s3-alpha-sig.figma.com/img/f0a3/3761/69c4da5e78338d8bb6dc30ecc0564f18?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Cr6o4JdcO2Hwf~ei-8kgTojS4jJDAWaNWt7YU42aD2ucQsQRqEq7tW8QsVOkqyE4FNi-zul~1sLRY-qtqpq9a3tnrm9T6zovA4jK65e8XQRz7TE03RdzOxiMaqoLckyCA6ZfhGvP-xXXNe9p5pveQhLNlAuwv0ZjNY9YCXVbl5CJpwXeixotKPzlPlUQC5lobzp~NkUtszOzguEnm6W80xE5tOsrUBYBWDOykgEAfHbhNrqBw0Zedjb48Wx1rakxlUqY1JokomBmGKdR~22zlVNF0ZUWeVYpfyOuo9N0Ib1fWfl2gVJ~ipAVA0ti1S2VTKmueYtNZAOp1xINyBjvbw__",
-    "https://s3-alpha-sig.figma.com/img/c9f0/5936/9f4f78c8093dd68bfe6026a03a9fa2c8?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LS2E2m5CqNXbvqVprBvFkQLhgfc7c-2RexQIkTt8xOgIgISTfjU~Drpt8hAPU-YEtBlNcSKWlG~6furSaK51VkDpzrIkY2m9f3j1DDbx7~M0fZ2gRW-Rd5UnE53voe52zvHyCtREi~Xw0yhwgY2cdfvc1N7fpVyJcpQy3TMlIsNadbmyOiO8a-b7tEEbEZajoE2DFVnU62eFKbK9pLMmm1HP0Es4M0AyVj0CHwjTr9D8uYv-9-hHZXTj5o0Ym-x~8iVXDX1IM~Mq1aeGyszWvJN3mv2TL8rw0QJPW~TEhfdZrcdUq9DEpqXFIeAsDdyubRlwkvLkVbX0R8POSgUrUA__",
-    "https://s3-alpha-sig.figma.com/img/939f/d722/70ffd81364346efa0b542910aed37b59?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AYVRtVJBzvULAFrkfDcZ78GJoXT6m4oOkd1BtAxMlvpy40ZNdHyt9dvxhI~-viIbGjj6aElH1xTReKyWTjQCxkb-OvV~cxbAUELbRCdzs6bNjJ8OgpeR3tnhL~szSLAhf1ClhJXEazce1pfDtfCdvv40IBz~z22Sw6cUM-wGsg9jFWmtsCiLqcyj1pIJrXml2ttJ7qTBZtZVYXlE6ufi0e95e26kQ03uh2GMfUMWqVZsN5mUy72k2DTNfJgKQMrlqEJxWpIqQTET~1g~NCTnXhCSjjQniaeXYDw66sMb8rhrHW1G3Wu1exrByupKnQmEE9M2EIzHH9nwPLemDi4Z9A__",
+  "/images/user1.jpg",
+  "/images/user2.jpg",
+  "/images/user3.jpg",
+  "/images/user4.png",
+  "/images/user5.jpg", 
   ];
 
   // react-query to Fetch user 
@@ -128,7 +129,7 @@ const Users = () => {
               key={index}
             >
               <Image
-                src={userImages[index % 3]}
+                src={userImages[index % 5]}
                 alt="user"
                 height={80}
                 width={80}
