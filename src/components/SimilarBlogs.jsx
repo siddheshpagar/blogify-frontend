@@ -15,7 +15,7 @@ const SimilarBlogs = ({ id }) => {
     const fewBlogsQuery = useQuery({
         queryKey: ["blog"],
         queryFn: fetchAllBlogs,
-        // staleTime: 5 * 60 * 1000,
+        staleTime: 5 * 60 * 1000,
         retry: false,
     });
 

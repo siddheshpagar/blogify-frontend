@@ -28,7 +28,8 @@ const Page = () => {
     const allBlogsQuery = useQuery({
         queryKey: ["blog"],
         queryFn: fetchAllBlogs,
-        // staleTime: 5 * 60 * 1000,
+        // refetchOnWindowFocus: false,
+        staleTime: 5 * 60 * 1000,
         retry: false,
     });
 

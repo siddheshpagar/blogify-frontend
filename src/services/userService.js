@@ -1,11 +1,15 @@
 import axios from "axios";
-import { BASE_URL } from "./APIConstant"
+import { BASE_URL } from "./APIConstant";
+import getAuthUserHeader from "./authUserHeader";
 
 // function to fetch details of the currently logged-in user from backend
 export const fetchUser = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/user/details`,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
 
     return response;
@@ -19,7 +23,10 @@ export const logoutUser = async () => {
   try {
     const response = await axios.post(`${BASE_URL}/user/logout`,
       {},
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
 
     return response;
@@ -40,7 +47,10 @@ export const uploadBlog = async ({ title, description, category, author, image }
 
     const response = await axios.post(`${BASE_URL}/blog`,
       formData,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     console.log("successfuuu");
     return response;
@@ -54,7 +64,10 @@ export const uploadBlog = async ({ title, description, category, author, image }
 export const fetchAllBlogs = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/blog`,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {
@@ -66,7 +79,10 @@ export const fetchAllBlogs = async () => {
 export const fetchUserBlogs = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/blog/user`,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {
@@ -78,7 +94,10 @@ export const fetchUserBlogs = async () => {
 export const deleteUserBlogById = async (id) => {
   try {
     const response = await axios.delete(`${BASE_URL}/blog/deleteblog/${id}`,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {
@@ -90,7 +109,10 @@ export const deleteUserBlogById = async (id) => {
 export const fetchBlogById = async (id) => {
   try {
     const response = await axios.get(`${BASE_URL}/blog/${id}`,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {
@@ -110,7 +132,10 @@ export const editBlogById = async (id, updatedBlog) => {
 
     const response = await axios.put(`${BASE_URL}/blog/${id}`,
       formData,
-      { withCredentials: true }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {

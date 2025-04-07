@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { BASE_URL } from './APIConstant';
+import getAuthAdminHeader from './authAdminHeader';
 
 // API call to register a new admin
 export const adminSignUp = async (adminRegistrationData) => {
@@ -16,10 +17,14 @@ export const adminLogin = async (adminLoginData) => {
   try {
     const response = await axios.post(`${BASE_URL}/admin/login`,
       adminLoginData,
-      {
-        withCredentials: true, // Include cookies in the request
-      }
+      getAuthAdminHeader()
     );
+
+    const token = response?.data?.token;
+    if (token) {
+      document.cookie = `adminToken=${token}; path=/; secure; samesite=Strict`;
+    }
+
     return response;
   } catch (error) {
     throw error;

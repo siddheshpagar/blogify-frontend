@@ -92,11 +92,11 @@ const Blogs = () => {
 
                             {/* displaying a short preview of the blog description */}
                             <p className=" ProseMirror text-[#98989A] break-all lg:mt-3 text-base lg:text-xl"
-                                dangerouslySetInnerHTML={{ __html: firstBlog.description.slice(0, 150) }}
+                                dangerouslySetInnerHTML={{ __html: `${firstBlog.description.slice(0, 150)}...` }}
                             />
 
-                            {/* Blog metadata */}
-                            <div className="mt-[20px] md:mt-[50px] grid grid-cols-3 gap-x-2 gap-y-2 text-gray-500">
+                            {/* Blog metadata mt-[20px] md:mt-[50px]*/}
+                            <div className="grid grid-cols-3 gap-x-2 gap-y-2 text-gray-500">
                                 {/* Headings */}
                                 <div className="text-[#98989A] text-sm lg:text-lg">Category</div>
                                 <div className="text-[#98989A] text-sm lg:text-lg">Publication Date</div>

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { BASE_URL } from './APIConstant';
+import getAuthUserHeader from './authUserHeader';
+
 
 // API call to register a new user
 export const userSignUp = async (registrationData) => {
@@ -16,15 +18,17 @@ export const userLogin = async (loginData) => {
   try {
     const response = await axios.post(`${BASE_URL}/user/login`,
       loginData,
-      {
-        withCredentials: true, // Include cookies in the request
-      }
+      getAuthUserHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
 
     const token = response?.data?.token;
     if (token) {
-      document.cookie = `userToken=${token}; path=/; secure; samesite=None`;
+      document.cookie = `userToken=${token}; path=/; secure; samesite=Strict`;
     }
+
     return response;
   } catch (error) {
     throw error;

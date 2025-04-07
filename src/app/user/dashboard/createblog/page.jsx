@@ -112,9 +112,8 @@ const Page = () => {
 
   // function to handle form submission
   const handleSubmit = (values) => {
-    // console.log(values);
-    submitBlog.mutate(values);
-    // form.reset();
+    // submitBlog.mutate(values);// Uncomment this line when running on localhost (your local machine) to enable blog uploads
+    alert("Blog uploading is currently disabled by the developer of this website.");
   };
 
   // function to handle image preview

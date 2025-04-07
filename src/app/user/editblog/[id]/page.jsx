@@ -131,7 +131,8 @@ const Page = ({ params }) => {
 
   // function to handle form submission
   const handleSubmit = (values) => {
-    updateBlogMutation.mutate(values);
+    // updateBlogMutation.mutate(values);// Uncomment this line to enable blog editing functionality.
+    alert("Blog editing is currently disabled by the developer of this website.");
     // form.reset();
   };
 

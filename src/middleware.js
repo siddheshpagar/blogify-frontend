@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 // Middleware function
 export function middleware(request) {
-    console.log("Middleware cookies:", request.cookies.getAll());
+    // console.log("Middleware cookies:", request.cookies.getAll());
     const userToken = request.cookies.get("userToken")?.value;
     const adminToken = request.cookies.get("adminToken")?.value;
 
@@ -40,7 +40,7 @@ export function middleware(request) {
         return redirectToLogin('/admin/login');
     }
 
-    console.log(`Middleware: UserToken=${userToken}, AdminToken=${adminToken}`);
+    // console.log(`Middleware: UserToken=${userToken}, AdminToken=${adminToken}`);
 }
 
 // Configuration for matching paths

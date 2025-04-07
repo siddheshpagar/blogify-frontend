@@ -1,14 +1,12 @@
 import axios from "axios";
 import { BASE_URL } from "./APIConstant"
+import getAuthAdminHeader from "./authAdminHeader";
 
 // Function to fetch all users from the backend
 export const fetchAllUsers = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/admin/users`
-      ,
-      {
-        withCredentials: true, // Include cookies in the request
-      }
+    const response = await axios.get(`${BASE_URL}/admin/users`,
+      getAuthAdminHeader()
     );
     return response;
   } catch (error) {
@@ -21,9 +19,10 @@ export const setBlockStatus = async ({ userId, isBlocked }) => {
   try {
     const response = await axios.patch(`${BASE_URL}/admin/set-block-status/${userId}`,
       { isBlocked: !isBlocked },
-      {
-        withCredentials: true, // Include cookies in the request
-      }
+      getAuthAdminHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     return response;
   } catch (error) {
@@ -35,7 +34,10 @@ export const setBlockStatus = async ({ userId, isBlocked }) => {
 export const fetchAdmin = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/admin/details`,
-      { withCredentials: true }
+      getAuthAdminHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
     // console.log( response.data.admin);
 
@@ -51,7 +53,10 @@ export const logoutAdmin = async () => {
   try {
     const response = await axios.post(`${BASE_URL}/admin/logout`,
       {},
-      { withCredentials: true }
+      getAuthAdminHeader()
+      // {
+      //   withCredentials: true, // Include cookies in the request
+      // }
     );
 
     return response;

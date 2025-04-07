@@ -123,7 +123,8 @@ const Page = () => {
                   {/* delete blog button */}
                   <Trash
                     onClick={() => {
-                      deleteUserBlogByIdMutation.mutate(item._id);
+                      // deleteUserBlogByIdMutation.mutate(item._id);// Uncomment this line when running on localhost (your local machine) to enable blog deletion functionality.
+                      alert("Blog deletion is currently disabled by the developer of this website.");
                     }}
                     className="text-gray-400 cursor-pointer hover:text-white "
                   />

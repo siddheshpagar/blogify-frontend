@@ -5,10 +5,13 @@ import { fetchBlogById } from '@/services/userService';
 import { useQuery } from '@tanstack/react-query';
 import { ArrowDown, ArrowUp, Eye, Heart, Send } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 const Page = ({ params }) => {
     const { id } = params;
+
+    const router = useRouter();
 
     const [isOpen, setIsOpen] = useState(false);// state to handle read more toggle and hight of blog description
     const [showReadMoreButton, setShowReadMoreButton] = useState(false);// to show/hide read more button and also to show effect on blog description
@@ -20,6 +23,7 @@ const Page = ({ params }) => {
     const fetchBlogByIdQuery = useQuery({
         queryKey: ["blog", id],// cache based on blog id
         queryFn: () => fetchBlogById(id),
+        staleTime: 5 * 60 * 1000,
         enabled: !!id,// query will not run if id is not there
     });
 
