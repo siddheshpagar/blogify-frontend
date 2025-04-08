@@ -20,11 +20,6 @@ export const adminLogin = async (adminLoginData) => {
       getAuthAdminHeader()
     );
 
-    const token = response?.data?.token;
-    if (token) {
-      document.cookie = `adminToken=${token}; path=/; secure; samesite=Strict`;
-    }
-
     return response;
   } catch (error) {
     throw error;

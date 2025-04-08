@@ -50,9 +50,12 @@ const Page = () => {
     mutationFn: adminLogin,
     onSuccess: async (data) => {
       alert(data.data.message);
-      form.reset();
-      await fetchAdmin();
-      router.push(redirectUrl);
+      const token = data?.data?.token;
+      if (token) {
+        document.cookie = `adminToken=${token}; path=/; secure; samesite=Strict`;
+        await fetchAdmin();
+        window.location.href = redirectUrl;// it Fully reload the page to trigger middleware with fresh cookie
+      }
     },
     // 
     onError: (error) => {

@@ -24,11 +24,6 @@ export const userLogin = async (loginData) => {
       // }
     );
 
-    const token = response?.data?.token;
-    if (token) {
-      document.cookie = `userToken=${token}; path=/; secure; samesite=Strict`;
-    }
-
     return response;
   } catch (error) {
     throw error;

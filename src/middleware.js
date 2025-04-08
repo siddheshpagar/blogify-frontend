@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
-import { isUserLoggedIn } from './actions/userAuthActions';
 
 // Middleware function
-export async function middleware(request) {
+export function middleware(request) {
     // console.log("Middleware cookies:", request.cookies.getAll());
-    const userToken = await isUserLoggedIn() //request.cookies.get("userToken")?.value;
+    const userToken = request.cookies.get("userToken")?.value;
     const adminToken = request.cookies.get("adminToken")?.value;
 
     const userPaths = ['/user/login', '/user/signup'];

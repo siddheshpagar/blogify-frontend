@@ -53,11 +53,13 @@ const Page = () => {
   const loginMutation = useMutation({
     mutationFn: userLogin,
     onSuccess: async (data) => {
-
       alert(data.data.message);
-      form.reset();
-      await fetchUser();
-      router.push(redirectUrl);
+      const token = data?.data?.token;
+      if (token) {
+        document.cookie = `userToken=${token}; path=/; secure; samesite=Strict`;
+        await fetchUser();
+        window.location.href = redirectUrl;// it Fully reload the page to trigger middleware with fresh cookie
+      }
     },
     // 
     onError: (error) => {
