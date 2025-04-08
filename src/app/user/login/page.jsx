@@ -56,7 +56,7 @@ const Page = () => {
       alert(data.data.message);
       form.reset();
       await fetchUser();
-      router.push(redirectUrl);
+      router.replace(redirectUrl);
     },
     // 
     onError: (error) => {
