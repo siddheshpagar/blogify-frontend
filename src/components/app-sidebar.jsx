@@ -120,13 +120,13 @@ export function AppSidebar({
           <SidebarMenuItem>
             <SidebarMenuButton className="mt-[50px] mb-[64px] " size="xl" asChild>
               <Link href="#">
-                <Image src="/logo.png" width={40} height={40} alt="FutureTech Logo" />
+                <Image src="/logo.png" width={40} height={40} alt={`${process.env.NEXT_PUBLIC_APP_NAME} Logo`} />
                 {/* <div
                   className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                   <Command className="size-4" />
                 </div> */}
                 {/* <div className="grid flex-1 text-left text-sm leading-tight"> */}
-                <span className="ml-[7px] truncate text-lg lg:text-xl font-bold text-white">FutureTech</span>
+                <span className="ml-[7px] truncate text-lg lg:text-xl font-bold text-white">{process.env.NEXT_PUBLIC_APP_NAME}</span>
                 {/* <span className="truncate text-xs">Enterprise</span> */}
                 {/* </div> */}
               </Link>

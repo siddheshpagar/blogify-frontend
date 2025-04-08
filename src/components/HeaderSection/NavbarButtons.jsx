@@ -60,8 +60,8 @@ const NavbarButtons = () => {
             <div className="border-b md:border-0 border-[#262626] flex justify-between items-center py-4 px-6 ">
                 {/* Logo Section */}
                 <Link href={"/"} className="flex items-center space-x-3">
-                    <Image src="/logo.png" alt="FutureTech Logo" width={50} height={50} className='w-[35px] h-[35px] md:w-[50px]  md:h-[50px]' />
-                    <span className="text-lg md:text-xl font-bold">FutureTech</span>
+                    <Image src="/logo.png" alt={`${process.env.NEXT_PUBLIC_APP_NAME} Logo`} width={50} height={50} className='w-[35px] h-[35px] md:w-[50px]  md:h-[50px]' />
+                    <span className="text-lg md:text-xl font-bold">{process.env.NEXT_PUBLIC_APP_NAME}</span>
                 </Link>
 
                 {/* Desktop Navigation Links */}

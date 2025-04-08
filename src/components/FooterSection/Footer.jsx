@@ -60,7 +60,7 @@ const Footer = () => {
                     </Link>
                 </div>
 
-                <p className='order-3 lg:order-3'>&copy; 2024 FutureTech. All rights reserved.</p>
+                <p className='order-3 lg:order-3'>&copy; 2024 Blogify. All rights reserved.</p>
             </div>
         </footer>
     )

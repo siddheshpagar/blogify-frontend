@@ -82,7 +82,7 @@ const Page = () => {
     <div className='px-[16px] lg:px-0 flex flex-col lg:flex-row lg:items-start lg:justify-center lg:space-x-[80px] lg:py-[80px] py-[64px] space-y-[64px] lg:space-y-0'>
 
       <div>
-        <Image src="/logInImg.png" alt="FutureTech Logo" width={80} height={80} className='w-[80px] h-[80px] mb-[50px]' />
+        <Image src="/logInImg.png" alt={`${process.env.NEXT_PUBLIC_APP_NAME} Logo`} width={80} height={80} className='w-[80px] h-[80px] mb-[50px]' />
         <h1 className=' text-[24px] lg:text-[58px]'>Welcome,<br />
           Enter your details to <br />
           Create Account</h1>

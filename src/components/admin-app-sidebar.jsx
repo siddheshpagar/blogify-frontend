@@ -50,9 +50,9 @@ export function AppSidebar({
           <SidebarMenuItem>
             <SidebarMenuButton className="mt-[50px] mb-[64px] " size="xl" asChild>
               <Link href="#">
-                <Image src="/logo.png" width={40} height={40} alt="FutureTech Logo" />
+                <Image src="/logo.png" width={40} height={40} alt={`${process.env.NEXT_PUBLIC_APP_NAME} Logo`} />
                 <span className="ml-[7px] truncate text-lg lg:text-xl font-bold text-white">
-                  FutureTech
+                  {process.env.NEXT_PUBLIC_APP_NAME}
                 </span>
               </Link>
             </SidebarMenuButton>

@@ -51,7 +51,7 @@ export default function TopOfHomepage() {
                 Explore the Frontiers of Artificial Intelligence
               </h1>
               <p className="text-sm lg:text-lg text-[#7E7E81] mt-4">
-                Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.
+                Welcome to the epicenter of AI innovation. {process.env.NEXT_PUBLIC_APP_NAME} AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.
               </p>
             </div>
           </section>

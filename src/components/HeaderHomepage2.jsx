@@ -26,8 +26,8 @@ export default function HeaderHomepage() {
       {/* Header */}
       <header className="bg-[#1a1a1a] flex justify-between items-center py-4 px-6">
         <div className="flex items-center space-x-3">
-          <Image src="/logo.png" alt="FutureTech Logo" width={50} height={50} className='w-[35px] h-[35px] lg:w-[50px]  lg:h-[50px]' />
-          <span className="text-lg lg:text-xl font-bold">FutureTech</span>
+          <Image src="/logo.png" alt={`${process.env.NEXT_PUBLIC_APP_NAME} Logo`} width={50} height={50} className='w-[35px] h-[35px] lg:w-[50px]  lg:h-[50px]' />
+          <span className="text-lg lg:text-xl font-bold">{process.env.NEXT_PUBLIC_APP_NAME}</span>
         </div>
         <Button variant="secondary" className="bg-yellow-500 text-black">
           Subscribe
@@ -50,7 +50,7 @@ export default function HeaderHomepage() {
                 Explore the Frontiers of Artificial Intelligence
               </h1>
               <p className="text-sm lg:text-lg text-[#7E7E81] mt-4">
-                Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.
+                Welcome to the epicenter of AI innovation. Blogify AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.
               </p>
             </div>
           </section>
