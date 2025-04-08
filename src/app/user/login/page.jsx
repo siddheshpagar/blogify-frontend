@@ -56,7 +56,7 @@ const Page = () => {
       alert(data.data.message);
       form.reset();
       await fetchUser();
-      
+      router.push("/");
     },
     // 
     onError: (error) => {
@@ -68,7 +68,6 @@ const Page = () => {
   const handleSubmit = async (values) => {
     const { terms, ...loginData } = values;// Excluding terms field
     loginMutation.mutate(loginData);
-    router.push("/");
     // try {
     //   const response = await userLogin(loginData);
     //   if (response.status === 200) {
