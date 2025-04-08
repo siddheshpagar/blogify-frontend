@@ -24,10 +24,10 @@ export const userLogin = async (loginData) => {
       // }
     );
 
-    const token = response?.data?.token;
-    if (token) {
-      document.cookie = `userToken=${token}; path=/; secure; samesite=Lax`;
-    }
+    // const token = response?.data?.token;
+    // if (token) {
+    //   document.cookie = `userToken=${token}; path=/; secure; samesite=Lax`;
+    // }
 
     return response;
   } catch (error) {

@@ -25,7 +25,7 @@ const Page = () => {
 
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectUrl =  '/';
+  const redirectUrl = searchParams.get('redirect') || '/';
 
   // schema for form validation using Zod
   const schema = z.object({
@@ -53,11 +53,14 @@ const Page = () => {
   const loginMutation = useMutation({
     mutationFn: userLogin,
     onSuccess: async (data) => {
-      router.push("/");
+      const token = data?.data?.token;
+    if (token) {
+      document.cookie = `userToken=${token}; path=/; secure; samesite=Lax`;
+    }
       alert(data.data.message);
       form.reset();
       await fetchUser();
-      
+      router.push(redirectUrl);
     },
     // 
     onError: (error) => {
