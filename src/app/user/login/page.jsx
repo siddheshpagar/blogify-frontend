@@ -53,10 +53,11 @@ const Page = () => {
   const loginMutation = useMutation({
     mutationFn: userLogin,
     onSuccess: async (data) => {
+      router.push("/");
       alert(data.data.message);
       form.reset();
       await fetchUser();
-      router.push("/");
+      
     },
     // 
     onError: (error) => {
