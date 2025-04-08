@@ -53,7 +53,7 @@ const Page = () => {
       const token = data?.data?.token;
       if (token) {
         document.cookie = `adminToken=${token}; path=/; secure; samesite=Strict`;
-        await fetchAdmin();
+        // await fetchAdmin();
         window.location.href = redirectUrl;// it Fully reload the page to trigger middleware with fresh cookie
       }
     },

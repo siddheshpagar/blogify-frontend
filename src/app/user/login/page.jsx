@@ -57,7 +57,7 @@ const Page = () => {
       const token = data?.data?.token;
       if (token) {
         document.cookie = `userToken=${token}; path=/; secure; samesite=Strict`;
-        await fetchUser();
+        // await fetchUser();
         window.location.href = redirectUrl;// it Fully reload the page to trigger middleware with fresh cookie
       }
     },
