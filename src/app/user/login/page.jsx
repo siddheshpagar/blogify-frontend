@@ -53,13 +53,16 @@ const Page = () => {
   const loginMutation = useMutation({
     mutationFn: userLogin,
     onSuccess: async (data) => {
+      alert(data.data.message);
       const token = data?.data?.token;
     if (token) {
       document.cookie = `userToken=${token}; path=/; secure; samesite=Lax`;
-    }
-      alert(data.data.message);
-      form.reset();
       await fetchUser();
+      window.location.href = redirectUrl;
+    }
+      
+      // form.reset();
+      
       router.push(redirectUrl);
     },
     // 
