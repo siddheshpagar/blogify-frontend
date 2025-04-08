@@ -25,7 +25,7 @@ const Page = () => {
 
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectUrl = searchParams.get('redirect') || '/';
+  const redirectUrl =  '/';
 
   // schema for form validation using Zod
   const schema = z.object({
