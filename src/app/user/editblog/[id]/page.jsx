@@ -46,6 +46,7 @@ const Page = ({ params }) => {
   const fetchBlogByIdQuery = useQuery({
     queryKey: ["blog", id],
     queryFn: () => fetchBlogById(id),
+    refetchOnWindowFocus: false,
     enabled: !!id,
   });
 
