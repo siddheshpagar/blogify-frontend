@@ -123,9 +123,37 @@ or Click here https://blogify-frontend-three.vercel.app
 ### 🔐 Login Page (Desktop View)
 ![Login Page (Desktop View)](https://github.com/user-attachments/assets/45e61839-d759-4173-945f-32ff8f1f6d8f)
 
-### 🔐 Login Page (Mobile View)
+<table>
+  <tr>
+    <th>🔐 Login Page (Mobile View)</th>
+    <th>📱 Homepage (Mobile View)</th>
+    <th>📖 Blog Page (Mobile View)</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img alt="Login Page (Mobile View)" src="https://github.com/user-attachments/assets/34adbc81-71b3-42eb-ad65-0e94b652a658" width="250" />
+    </td>
+    <td align="center">
+      <img alt="Homepage (Mobile View)" src="https://github.com/user-attachments/assets/30918df0-67ee-475f-8f32-109369eb9edc" width="250" />
+    </td>
+    <td align="center">
+      <img alt="Blog Page (Mobile View)" src="https://github.com/user-attachments/assets/263e2185-50f9-435d-983a-dd95ce7add5f" width="250" />
+    </td>
+  </tr>
+</table>
+
+<!-- ### 🔐 Login Page (Mobile View)
 <img alt="Login Page (Mobile View)" src="https://github.com/user-attachments/assets/34adbc81-71b3-42eb-ad65-0e94b652a658" width="300" />
 
+### 📱 Homepage (Mobile View)
+<img alt="Homepage (Mobile View)" src="https://github.com/user-attachments/assets/30918df0-67ee-475f-8f32-109369eb9edc" width="300" />
+
+
+### 📖 Blog Page (Mobile View)
+<img alt="Blog Page (Mobile View)" src="https://github.com/user-attachments/assets/263e2185-50f9-435d-983a-dd95ce7add5f" width="300" /> -->
+
+### 🧾 SideBar
+<img alt="SideBar" src="https://github.com/user-attachments/assets/43db5e28-c5ad-41d9-8aeb-c24c5bacb0a1" width="300" />
 
 ### 🏠 Homepage (Desktop View)
 ![Homepage (Desktop View)](https://github.com/user-attachments/assets/061a5083-ab71-4e35-852d-76c5abf8154f)
