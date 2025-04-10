@@ -121,7 +121,7 @@ blogify-backend/
 
 ## 📸 Project Demo (Video)
 <a href="https://youtu.be/51_I9xqr86w" target="_blank">
-  <img src="https://img.youtube.com/vi/51_I9xqr86w/maxresdefault.jpg" alt="Watch the video" width="500" />
+  <img src="https://img.youtube.com/vi/51_I9xqr86w/maxresdefault.jpg" alt="Watch the video" width="700" />
 </a>
 
 ## 📸 Screenshots
