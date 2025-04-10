@@ -120,6 +120,13 @@ blogify-backend/
 or Click here https://blogify-frontend-three.vercel.app
 
 ## 📸 Screenshots
+### 🔐 Login Page (Desktop View)
+![Login Page (Desktop View)](https://github.com/user-attachments/assets/45e61839-d759-4173-945f-32ff8f1f6d8f)
+
+### 🔐 Login Page (Mobile View)
+<img alt="Login Page (Mobile View)" src="https://github.com/user-attachments/assets/34adbc81-71b3-42eb-ad65-0e94b652a658" width="300" />
+
+
 ### 🏠 Homepage (Desktop View)
 ![Homepage (Desktop View)](https://github.com/user-attachments/assets/061a5083-ab71-4e35-852d-76c5abf8154f)
 
@@ -127,8 +134,6 @@ or Click here https://blogify-frontend-three.vercel.app
 <img src="https://github.com/user-attachments/assets/ff717de3-daa5-444b-b10c-878ec8fa0482" width="300" />
 <!-- ![Homepage (Mobile View)](https://github.com/user-attachments/assets/ff717de3-daa5-444b-b10c-878ec8fa0482) -->
 
-### 🔐 Login Page (Desktop View)
-![Login Page (Desktop View)](https://github.com/user-attachments/assets/45e61839-d759-4173-945f-32ff8f1f6d8f)
 
 ### 📝 All Blogs Dashboard (Desktop View)
 ![All Blogs Dashboard (Desktop View)](https://github.com/user-attachments/assets/4673efcc-b860-4235-abda-c99ecc5944aa)
