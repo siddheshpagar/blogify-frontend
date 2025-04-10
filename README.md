@@ -115,14 +115,16 @@ blogify-backend/
 | POST | `/user` | Register a new user |
 | POST | `/user/login` | User login |
 
-## 🌍 Live Demo
-🚀 [Click here to explore Blogify](https://blogify-frontend-three.vercel.app)  
-or Click here https://blogify-frontend-three.vercel.app
+## 🌍 Live Website  
+🚀 **Visit the live Blogify app here:**  
+🔗 [https://blogify-frontend-three.vercel.app](https://blogify-frontend-three.vercel.app)
+
+## 📸 Project Demo (Video)
+<a href="https://youtu.be/51_I9xqr86w" target="_blank">
+  <img src="https://img.youtube.com/vi/51_I9xqr86w/maxresdefault.jpg" alt="Watch the video" width="500" />
+</a>
 
 ## 📸 Screenshots
-### 🔐 Login Page (Desktop View)
-![Login Page (Desktop View)](https://github.com/user-attachments/assets/45e61839-d759-4173-945f-32ff8f1f6d8f)
-
 <table>
   <tr>
     <th>🔐 Login Page (Mobile View)</th>
@@ -130,50 +132,32 @@ or Click here https://blogify-frontend-three.vercel.app
     <th>📖 Blog Page (Mobile View)</th>
   </tr>
   <tr>
-    <td align="center">
+    <td align="center" valign="top">
       <img alt="Login Page (Mobile View)" src="https://github.com/user-attachments/assets/34adbc81-71b3-42eb-ad65-0e94b652a658" width="250" />
     </td>
-    <td align="center">
-      <img alt="Homepage (Mobile View)" src="https://github.com/user-attachments/assets/30918df0-67ee-475f-8f32-109369eb9edc" width="250" />
+    <td align="center" valign="top">
+      <img alt="Homepage (Mobile View)" src="https://github.com/user-attachments/assets/e1cd2a03-2ffb-4fa6-920d-9ffe4a0b5900" width="250" />
     </td>
-    <td align="center">
-      <img alt="Blog Page (Mobile View)" src="https://github.com/user-attachments/assets/263e2185-50f9-435d-983a-dd95ce7add5f" width="250" />
+    <td align="center" valign="top">
+      <img alt="Blog Page (Mobile View)" src="https://github.com/user-attachments/assets/39dec42b-da79-4a54-9bb8-c97f373844ec" width="250" />
     </td>
   </tr>
 </table>
 
-<!-- ### 🔐 Login Page (Mobile View)
-<img alt="Login Page (Mobile View)" src="https://github.com/user-attachments/assets/34adbc81-71b3-42eb-ad65-0e94b652a658" width="300" />
-
-### 📱 Homepage (Mobile View)
-<img alt="Homepage (Mobile View)" src="https://github.com/user-attachments/assets/30918df0-67ee-475f-8f32-109369eb9edc" width="300" />
-
-
-### 📖 Blog Page (Mobile View)
-<img alt="Blog Page (Mobile View)" src="https://github.com/user-attachments/assets/263e2185-50f9-435d-983a-dd95ce7add5f" width="300" /> -->
-
 ### 🧾 SideBar
 <img alt="SideBar" src="https://github.com/user-attachments/assets/43db5e28-c5ad-41d9-8aeb-c24c5bacb0a1" width="300" />
 
+### 🔐 Login Page (Desktop View)
+![Login Page (Desktop View)](https://github.com/user-attachments/assets/45e61839-d759-4173-945f-32ff8f1f6d8f)
+
 ### 🏠 Homepage (Desktop View)
 ![Homepage (Desktop View)](https://github.com/user-attachments/assets/061a5083-ab71-4e35-852d-76c5abf8154f)
-
-### 📱 Homepage (Mobile View)
-<img src="https://github.com/user-attachments/assets/ff717de3-daa5-444b-b10c-878ec8fa0482" width="300" />
-<!-- ![Homepage (Mobile View)](https://github.com/user-attachments/assets/ff717de3-daa5-444b-b10c-878ec8fa0482) -->
-
 
 ### 📝 All Blogs Dashboard (Desktop View)
 ![All Blogs Dashboard (Desktop View)](https://github.com/user-attachments/assets/4673efcc-b860-4235-abda-c99ecc5944aa)
 
 ### 📖 Blog Page (Desktop View)
 ![Blog Page (Desktop View)](https://github.com/user-attachments/assets/395569f5-51d7-4c30-83ec-c9afff2d0d6a)
-
-### 📖 Blog Page (Mobile View)
-![Blog Page (Mobile View)](https://github.com/user-attachments/assets/b3a014aa-8bff-4f06-8c26-941dbd138a40)
-
-## 📸 Project Demo (Video)
-[![Watch the video](https://img.youtube.com/vi/51_I9xqr86w/maxresdefault.jpg)](https://youtu.be/51_I9xqr86w)
 
 ## 📬 Contact
 👨‍💻 Created by **Siddhesh Suresh Pagar**
